@@ -98,7 +98,5 @@ $tipo = 'erro';
 </form>
 </div>
 <?php endforeach; ?>
-</div>
-
 </body>
 </html>
