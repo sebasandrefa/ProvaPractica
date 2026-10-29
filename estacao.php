@@ -43,6 +43,5 @@
     <option value="proteger a estacao">Proteger a Estação</option>
     </select>
 
-    <button type = submit 
 </body>
 </html>
