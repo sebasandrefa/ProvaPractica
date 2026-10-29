@@ -1,16 +1,9 @@
-<?php
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stytle.css">
+    <link rel="stylesheet" href="stytle.css">
     <title>Estação Espacial De Robôs</title>
 </head>
 <body>
@@ -49,5 +42,7 @@
     <option value="reparar equipamentos">Reparar Equipamentos</option>
     <option value="proteger a estacao">Proteger a Estação</option>
     </select>
+
+    <button type = submit 
 </body>
 </html>

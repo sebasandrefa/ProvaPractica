@@ -8,10 +8,10 @@ banco de dados.
 
 ----------------------------------------------------------------------------------------------------------
 2. Tipos de robôs
-Modelo      | Energia  | inicial  | Potência Função
-Explorador  | 100      | 20       | Investigar planetas
-Engenheiro  | 120      | 15       | Reparar equipamentos
-Defensor    | 150      | 30       | Proteger a estação
+Modelo      | Energia inicial  | Potência  | Função
+Explorador  | 100              | 20        | Investigar planetas
+Engenheiro  | 120              | 15        | Reparar equipamentos
+Defensor    | 150              | 30        | Proteger a estação
 
 ------------------------------------------------------------------------------------------------------------------------
 3. Cadastro de robôs — 1,0 ponto
