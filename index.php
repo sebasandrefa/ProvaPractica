@@ -1,10 +1,10 @@
 <?php
-session_star();
+session_start();
 require_once 'Robo.php';
 require_once 'Repositorio.php';
 
-if (!isset($_SESSION['recargas'])){
-    $SESSION['recargas'] = 0;
+if (!isset($_SESSION['recargas'])) {
+$_SESSION['recargas'] = 0;
 }
 
 $robos = carregarRobos();
@@ -12,12 +12,42 @@ $mensagem = '';
 $tipo = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['cadastrar'])) {
+
+
+if (isset($_POST['cadastrar'])) {
 $nome = trim($_POST['nome']);
 $modelo = $_POST['modelo'];
 $operador = trim($_POST['operador']);
+
+
+
+if ($nome == '' || $modelo == '' || $operador == '') {
+$mensagem = 'Preencha todos os campos!';
+$tipo = 'erro';
+} else {
+$robos[] = new Robo($nome, $modelo);
+salvarRobos($robos);
+$_SESSION['operador'] = $operador;
+$mensagem = "Robô $nome cadastrado com sucesso!";
+$tipo = 'sucesso';
     }
 }
+
+if (isset($_POST['recarregar'])) {
+$robo = $robos[$_POST['indice']];
+
+if ($robo->recarregar()) {
+salvarRobos($robos);
+$_SESSION['recargas']++;
+$mensagem = "$robo->nome recarregado! Energia: $robo->energia";
+$tipo = 'sucesso';
+} else {
+$mensagem = "$robo->nome já está com energia máxima!";
+$tipo = 'erro';
+        }
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
