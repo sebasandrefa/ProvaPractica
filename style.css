@@ -1,0 +1,54 @@
+body {
+    font-family: Arial;
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 20px;
+}
+
+.box {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    display: block;
+    padding: 8px;
+    margin: 4px 0;
+}
+
+button {
+    background: #38bdf8;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sucesso {
+    background: #166534;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.erro {
+    background: #991b1b;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card {
+    display: inline-block;
+    width: 200px;
+    background: #0f172a;
+    padding: 12px;
+    margin: 6px;
+    border-radius: 8px;
+    border-top: 6px solid;
+    vertical-align: top;
+}
+
+.Explorador { border-color: #22c55e; }
+.Engenheiro { border-color: #f59e0b; }
+.Defensor   { border-color: #ef4444; }
